@@ -3,7 +3,7 @@ import urllib.request
 import urllib.parse
 #Static variable
 ser = serial.Serial(
-    port='/dev/ttyACM0',\
+    port='/dev/ttyACM2',\
     baudrate=9600)
 #Allow write boolean
 prt = False

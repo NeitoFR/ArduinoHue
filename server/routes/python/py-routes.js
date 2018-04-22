@@ -1,23 +1,19 @@
+"use strict"
 var express = require('express'),
+hue = require('../../hue-api/hue-request'),
 app = module.exports = express.Router();
 
-app.get('/allLedState', function(req, res){
-    //console.log(allLedState);
-    
-    // console.log('Response : ', req.body);
-    res.status(200).send(allLedState).end();
-    // for(var i = 0; i < 6; i++){
-    //     allLedState[i] = !allLedState[i];
-    // }
-});
 app.post('/setBrightness', function(req, res){
     console.log(req.body);
-    
-    res.status(200).end();
-});
-app.get('/setBrightness', function(req, res){
-    console.log(req.body);
-    console.log("!!!");
-    
-    res.status(200).end();
+    hue.setBrightness(req.body.bri, function(err, data){
+        if(err){ 
+            //console.log('Request : SELECT * FROM USER_TABLE :: ERROR');
+            res.status(400).send(err).end();
+        }
+        else{
+            console.log('resp from hue :', data);
+            
+            res.status(200).end();
+        }
+    });
 });
