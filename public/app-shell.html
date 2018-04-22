@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<!-- Shared Styles -->
+<link rel='import' href='./shared-styles.html'>
+
+<dom-module id='app-shell'>
+    <template>
+        <style include='shared-styles'>
+        </style>
+        Shell of the applciation
+    </template>
+    <script>
+        class AppShell extends Polymer.Element {
+            static get is() {
+                return 'app-shell'
+            }
+            static get properties() {
+                 return {
+
+                }
+            }
+        }
+        window.customElements.define(AppShell.is, AppShell);
+    </script>
+</dom-module>

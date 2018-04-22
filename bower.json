@@ -1,0 +1,22 @@
+{
+  "name": "hue-api",
+  "description": "Begining of my own Hue controller",
+  "main": "server/app.js",
+  "authors": [
+    "NeitoFr"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.6.0"
+  }
+}
